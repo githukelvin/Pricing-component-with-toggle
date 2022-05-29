@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import 'normalize.css';
 *{
 	padding: 0;
 	margin: 0;
@@ -17,18 +18,21 @@ main{
 	*/
 	width: 100%;
 	overflow: hidden;
-	height: 100vh;
+	height: auto;
 	
 }
 .bottom{
 	position: absolute;
 	margin-left: 0;
 	bottom: 0;
+	z-index: -1;
 }
+footer{display: none;}
 .top{
 	position: absolute;
 	right: 0;
 	top: 0;
+	z-index: -1;
 }
 .pr{
 	text-align: center;
@@ -48,7 +52,7 @@ label input{
 .pricing{
  width: 100%;
  margin-left: 400px;
- margin-top: 130px;
+ margin-top: 80px;
 }
 .Annually{
 display: grid;
@@ -117,14 +121,14 @@ hr{
 
 }
 input[type="checkbox"]{
-	width: 80px;
-	height: 45px;
+	width: 50px;
+	height: 25px;
 	 -webkit-appearance: none;
 	 background: hsl(237, 63%, 64%);
 	  outline: none;
 	  cursor: pointer;
 	  position: relative;
-	  top: -10px;
+	  top: -3px;
 	  left: -5px;
 	  border-radius: 20px;
 	  box-shadow: inset 0 0 5px rgba(0,0,0,.2) ;
@@ -135,8 +139,8 @@ input:checked[type="checkbox"]{
 	}
 input[type="checkbox"]:before{
 	content: '';
-	width: 40px;
-	height: 40px;
+	width: 20px;
+	height: 20px;
 	border-radius: 100%;
 	position: absolute;
 	top: 2px;
@@ -148,23 +152,28 @@ input[type="checkbox"]:before{
 	
 }
 input:checked[type="checkbox"]:before{
-left: 40px;
+left: 30px;
 
 }
-/*@media (max-width: 1440px){
+@media (max-width: 1440px){
+	main{
+		width: 100%;
+		height: 100vh;
+		overflow-y: hidden;
+	}
 	*{
 	padding: 0;
 	margin: 0;
 }
 .pr{
 	text-align: center;
-	margin-top: 80px;
+	margin-top: 50px;
 }
 .div-toggle{
 	display: flex;
 	gap: 1em;
-	margin-top: 50px;
-	margin-left: 45%;
+	margin-top: 20px;
+	margin-left: 43%;
 	margin-bottom: 50px;
 }
 label input{
@@ -174,16 +183,23 @@ label input{
 	display: flex;
 	flex-direction: row;
 	width: 100%;
+	margin-left: 330px;
 }
 }
-*/
+
 
 @media (max-width: 375px){
 	main{
 		width: 100%;
 		height: auto;
 		margin-bottom: 80px;
+				background-image: url(images/bg-top.svg);
+		background-position: top;
+		background-origin: border-box;
+		background-repeat: no-repeat;
+		
 	}
+	
 
 	.Annually{
 		display: grid;
@@ -191,6 +207,7 @@ label input{
 		gap: 2em;
 		grid-template-rows: 350px 350px 350px;
 	}
+
 	.pricing{
 		margin-left: 35px;
 	}
@@ -205,15 +222,25 @@ label input{
 	.Basic,.master,.Professional{
 		width:300px;
 	}
-}
+	.bottom,.top{
+		display: none;
+		width: 100px;
+	}
+
 .div-toggle{
 	color: hsl(234, 14%, 74%);
+}
 }
 @media (max-width: 320px){
 		main{
 		width: 100%;
 		height: auto;
 		margin-bottom: 80px;
+		background-image: url(images/bg-top.svg);
+		background-position: top;
+		background-origin: border-box;
+		background-repeat: no-repeat;
+		
 	}
 
 	.Annually{
@@ -226,8 +253,13 @@ label input{
 		margin-left: 9px;
 	}
 	.div-toggle{
-		margin-left: 10%;
+		margin-left: 17%;
 	}
+	.bottom,.top{
+		display: none;
+		width: 100px;
+	}
+
 	.Professional{
 	transform: scale(1.0);
 	background-color: hsl(237, 63%, 64%);
