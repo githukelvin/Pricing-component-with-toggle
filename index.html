@@ -20,7 +20,7 @@
   <p class="pr">Our Pricing</p>
   <div class="div-toggle">
     <p>Annually</p>
-    <label for="check"><input type="checkbox" role="switch" id="toggle" aria-expanded="false"></label>
+    <label for="check"><input type="checkbox" role="checkbox" aria-checked="false" id="toggle" ></label>
     <p>Monthly</p>
   </div>
   <div class="pricing">
@@ -103,18 +103,18 @@
     document.querySelector('#toggle').onclick = function(){
       const h1s  = document.querySelectorAll('h1');
     const tog = document.querySelector('#toggle');
-    const aria = tog.getAttribute('aria-expanded');
+    const aria = tog.getAttribute('aria-checked');
     if (aria === 'false'){
       h1s[0].textContent = "$19.99";
       h1s[1].innerText = "$24.99";
       h1s[2].innerText = "$39.99";
-      tog.setAttribute('aria-expanded',true);
+      tog.setAttribute('aria-checked',true);
       }
       else if(aria === 'true'){
       h1s[0].textContent = "$199.99";
       h1s[1].innerText = "$249.99";
       h1s[2].innerText = "$399.99";
-      tog.setAttribute('aria-expanded',false);
+      tog.setAttribute('aria-checked',false);
       }
     }
   </script>
