@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+
+}
+body{
+		background-color: hsl(240, 78%, 98%);
+}
+main{
+	/*
+	background-image: url(images/bg-bottom.svg);
+	background-image: url(images/bg-top.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: top;*/
+	width: 100%;
+	overflow: hidden;
+	height: 100vh;
+	
+}
+.pr{
+	text-align: center;
+ 	margin-top: 80px;
+ 	font-size: 30px
+}
+.div-toggle{
+	display: flex;
+	gap: 1em;
+	margin-top: 50px;
+	margin-left: 42%;
+	margin-bottom: 50px;
+}
+label input{
+	width: 30px;
+}
+.pricing{
+ width: 100%;
+ margin-left: 400px;
+ margin-top: 130px;
+}
+.Annually{
+display: grid;
+grid-auto-flow: column;
+grid-template-columns: 250px 250px 250px;
+grid-gap: 1.6em;
+
+}
+a{
+	padding: 5px 60px;
+	border-radius: 10px;
+	box-sizing: border-box;
+}
+.Basic a,
+.master a{
+	text-decoration: none;
+	color: hsl(0, 0%, 100%);
+	background-image: linear-gradient(to right,hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+.Basic h1,
+.master h1{
+	color: hsl(232, 13%, 33%);
+	font-size: 40px;
+}
+.Basic p,
+.master p{
+	color: hsl(233, 13%, 49%);
+
+}
+.headerp{
+	color:  hsl(240, 78%, 98%);
+}
+
+.Professional h1{
+	font-size: 40px;
+	color: hsl(240, 78%, 98%);
+}
+.Professional p{
+	color: hsl(240, 78%, 98%);	
+}
+.Basic,.master,.Professional{
+	background: hsl(0, 0%, 100%);
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	height: 350px;
+}
+.Professional{
+	transform: scale(1.2);
+	background-color: hsl(237, 63%, 64%);
+}
+.Professional a{
+	text-decoration: none;
+	color: hsl(237, 63%, 64%);
+	background-color: hsl(0, 0%, 100%);
+}
+
+hr{
+	width: 200px;
+	overflow: visible;
+	border: 0.5px solid  hsl(240, 78%, 98%);
+
+}
+input[type="checkbox"]{
+	width: 80px;
+	height: 45px;
+	 -webkit-appearance: none;
+	 background: hsl(237, 63%, 64%);
+	  outline: none;
+	  cursor: pointer;
+	  position: relative;
+	  top: -10px;
+	  left: -5px;
+	  border-radius: 20px;
+	  box-shadow: inset 0 0 5px rgba(0,0,0,.2) ;
+	}
+input:checked[type="checkbox"]{
+		 background: hsl(237, 63%, 64%);
+
+	}
+input[type="checkbox"]:before{
+	content: '';
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	position: absolute;
+	top: 2px;
+	left: 0;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+	transition: .5s ;
+
+	background-color: hsl(0, 0%, 100%);
+	
+}
+input:checked[type="checkbox"]:before{
+left: 40px;
+
+}
+/*@media (max-width: 1440px){
+	*{
+	padding: 0;
+	margin: 0;
+}
+.pr{
+	text-align: center;
+	margin-top: 80px;
+}
+.div-toggle{
+	display: flex;
+	gap: 1em;
+	margin-top: 50px;
+	margin-left: 45%;
+	margin-bottom: 50px;
+}
+label input{
+	width: 30px;
+}
+.pricing{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+}
+*/
+
+@media (max-width: 375px){
+	main{
+		width: 100%;
+		height: auto;
+		margin-bottom: 80px;
+	}
+
+	.Annually{
+		display: grid;
+		flex-direction: row;
+		gap: 2em;
+		grid-template-rows: 350px 350px 350px;
+	}
+	.pricing{
+		margin-left: 35px;
+	}
+	.div-toggle{
+		margin-left: 20%;
+	}
+	.Professional{
+	transform: scale(1.0);
+	background-color: hsl(237, 63%, 64%);
+
+}
+	.Basic,.master,.Professional{
+		width:300px;
+	}
+}
+.div-toggle{
+	color: hsl(234, 14%, 74%);
+}
+@media (max-width: 320px){
+		main{
+		width: 100%;
+		height: auto;
+		margin-bottom: 80px;
+	}
+
+	.Annually{
+		display: grid;
+		flex-direction: row;
+		gap: 2em;
+		grid-template-rows: 350px 350px 350px;
+	}
+	.pricing{
+		margin-left: 9px;
+	}
+	.div-toggle{
+		margin-left: 10%;
+	}
+	.Professional{
+	transform: scale(1.0);
+	background-color: hsl(237, 63%, 64%);
+
+}
+	.Basic,.master,.Professional{
+		width:300px;
+	}
+}
