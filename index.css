@@ -9,16 +9,26 @@ body{
 		background-color: hsl(240, 78%, 98%);
 }
 main{
-	/*
-	background-image: url(images/bg-bottom.svg);
+	
+	/*background-image: url(images/bg-bottom.svg);
 	background-image: url(images/bg-top.svg);
 	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: top;*/
+	background-position: left;
+	*/
 	width: 100%;
 	overflow: hidden;
 	height: 100vh;
 	
+}
+.bottom{
+	position: absolute;
+	margin-left: 0;
+	bottom: 0;
+}
+.top{
+	position: absolute;
+	right: 0;
+	top: 0;
 }
 .pr{
 	text-align: center;
